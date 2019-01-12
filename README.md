@@ -2,7 +2,7 @@
 This is a Coding Challenge Task for Front-end Development Job at Passion.io (work from home).
 (Includes React.js, Redux, Redux-thunk, SASS to CSS and HTML)
 
-Steps to Check the Test :-
+Steps to Check the Test :-( OAuth2 also added using Google Login API)
 
 1) First install all the dependencies using `npm install or npm i `
 2) Then Configure .env file for Google API (If You want to Integrate your Client API-KEY) and LOCAL_API_URL for Fetching JSON File.
