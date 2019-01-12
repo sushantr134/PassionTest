@@ -1,0 +1,138 @@
+@import '../../_common';
+
+body
+{
+    background:linear-gradient(200deg,#cceefa,rgb(1, 187, 187)) no-repeat;
+    width:100%;
+    height: 100vh;
+}
+.list__Container
+{
+    @include AlignCenter(center);
+    ul
+    {
+        @include AlignCenterStart;
+        flex-direction: column;
+        width: 50em;
+        padding: 5%;
+        list-style: none;
+        background: #f0efef;
+        border-radius: 0.33em;
+        box-shadow: 4px 4px 4px 0px grey;
+
+       .__userProfile
+       {
+         @include AlignCenter(center);
+         .__user
+         {
+             display: flex;
+             flex-direction: column-reverse;
+
+             label
+             {
+                 font-size: 0.77rem;
+                 font-weight: bold;
+                 color:rgb(37, 12, 95);
+                 text-align: center;
+                 padding: 1em;
+             }
+             img
+             {
+                 width: 100%;
+                 max-width: 100%;
+                 border-radius: 100%;
+             }
+         }
+       }
+       li
+       {
+          margin-bottom: 0.88em;
+          padding: 0.65em;
+          color:white;
+          font-size: 0.98rem;
+          letter-spacing: 1px;
+          font-weight: 100;
+          font-style: oblique;
+          box-shadow: 6px 5px 8px 0px #c0bcbc;
+          width: 17em;
+          text-align: left;
+          cursor: pointer;
+          position: relative;
+          background: linear-gradient(-90deg,rgb(167, 223, 241),rgb(17, 177, 177));
+          transition: background cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s;
+          .list_block
+          {
+              all:unset;
+              right:-16.8em;
+              top:0;
+              transform: scale(1,0);
+              position: absolute;
+              transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 0.44s;
+              transform-origin: top;
+              width: 100%;
+              @include AlignCenterStart;
+              z-index: 100;
+              ul
+              {
+                  all:unset;
+                  background: rgba(137, 114, 158,0.8);
+                  display: flex;
+                  flex-direction: column;
+                  width:inherit;
+                  padding: 1em;
+                  height: auto;
+                  position: relative;
+                  box-sizing: content-box;
+
+                  li
+                  {
+                      all:unset;
+                      color:white;
+                      font-style: initial;
+                      padding: 0.44em;
+                      margin-bottom: 0.55em;
+                      width: 95%;
+                      background: inherit;
+                      cursor: pointer;
+                      font-size: 0.7rem;
+                      transition: background cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+                     
+                      &:hover
+                      {
+                          background: #f0efef;
+                          color:black;
+                          transition: background cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+                      }
+                  }
+               /*   &::before
+                  {
+                      content: '';
+                      background: #aeff52;
+                      padding: 10px;
+                      overflow: hidden;
+                      top:5px;
+                      left:0;
+                      z-index: 10;
+                      transform:rotate(125deg);
+                      position: absolute;
+                  }*/
+              }
+              
+          }
+          
+          &:hover
+          {
+              background:linear-gradient(-90deg,rgb(137, 114, 158),rgb(58, 7, 68));
+              transition: background cubic-bezier(0.39, 0.575, 0.565, 1) 0.44s;
+              .list_block
+              {
+                transform: scale(1,1);
+                transform-origin: top;
+                transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 0.44s;
+              }
+          }
+          
+       } 
+    }
+  
+}

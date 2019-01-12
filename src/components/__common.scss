@@ -1,0 +1,51 @@
+@keyframes fadeIn
+{
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+}
+*,*::after,*::before
+{
+    padding:0;
+    margin:0;
+    border:none;
+    box-sizing: border-box;
+    animation: fadeIn 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin gridMaker($col,$row,$gap) {
+    
+    display: grid;
+    grid-template-columns: $col;
+    grid-auto-rows: $row;
+    grid-gap: $gap;
+}
+
+@mixin ImageResponsive ($width) 
+{
+    width:$width;
+    max-width: 100%;
+}
+
+@mixin AlignCenter($pos)
+{
+    display: flex;
+    justify-content: $pos;
+    align-items: center;
+}
+
+@mixin  AlignCenterStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin  AlignCenterLast {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
