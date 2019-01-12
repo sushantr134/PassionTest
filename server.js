@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const testApp = express()
 const path = require('path')
@@ -17,9 +18,9 @@ testApp.get('*',(req,res)=>{
   res.sendFile(path.resolve(__dirname,'build/index.html'))
 })
 
-testApp.listen(4000,(err)=>{
+testApp.listen(process.env.PORT,(err)=>{
     if(err)
       console.log(err)
     else
-        console.log('Server Started at 4000')  
+        console.log(`Server Started at ${process.env.PORT} `)  
 })
